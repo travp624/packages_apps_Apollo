@@ -164,7 +164,7 @@
     </style>
 
     <!-- Overflow Holo theme -->
-    <style name="Apollo.Holo" parent="@android:style/Theme.Holo">
+    <style name="Apollo.Holo" parent="@android:style/Theme.Holo.Light">
         <item name="android:actionOverflowButtonStyle">@style/OverFlowHolo</item>
     </style>
 
