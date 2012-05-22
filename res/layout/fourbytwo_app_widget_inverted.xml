@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/four_by_two_height"
+    android:background="@drawable/appwidget_bg2"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/four_by_two_controls_inverted"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/four_by_two_control_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/four_by_two_control_prev_inverted"
+            style="@style/FourByTwoMediaButton"
+            android:src="@drawable/apollo_holo_dark_previous" />
+
+        <ImageButton
+            android:id="@+id/four_by_two_control_play_inverted"
+            style="@style/FourByTwoMediaButton"
+            android:src="@drawable/apollo_holo_dark_play" />
+
+        <ImageButton
+            android:id="@+id/four_by_two_control_next_inverted"
+            style="@style/FourByTwoMediaButton"
+            android:src="@drawable/apollo_holo_dark_next" />
+
+        <ImageButton
+            android:id="@+id/four_by_two_control_shuffle_inverted"
+            style="@style/FourByTwoMediaButton"
+            android:src="@drawable/apollo_holo_dark_shuffle_normal" />
+
+        <ImageButton
+            android:id="@+id/four_by_two_control_repeat_inverted"
+            style="@style/FourByTwoMediaButton"
+            android:src="@drawable/apollo_holo_dark_repeat_normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/four_by_two_controls_info_divider_inverted"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/four_by_two_controls_inverted"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/four_by_two_albumart_inverted"
+        android:layout_width="@dimen/four_by_two_album_art_width"
+        android:layout_height="match_parent"
+        android:layout_above="@id/four_by_two_controls_info_divider_inverted"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/four_by_two_controls_inverted"
+        android:background="@color/holo_blue_dark" />
+
+    <LinearLayout
+        android:id="@+id/four_by_two_info_inverted"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/four_by_two_controls_inverted"
+        android:layout_toRightOf="@+id/four_by_two_albumart_inverted"
+        android:background="@drawable/holo_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/four_by_two_trackname_inverted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/four_by_two_albumname_inverted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/four_by_two_artistname_inverted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+</RelativeLayout>

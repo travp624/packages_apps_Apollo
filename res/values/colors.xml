@@ -3,6 +3,9 @@
 
     <!-- A transparent black -->
     <color name="transparent_black">#99000000</color>
+    
+    <!-- A transparent white for invert appwidger -->
+    <color name="transparent_grey">#99afafaf</color>
 
     <!-- A semi-transparent dark Holo shade of blue -->
     <color name="holo_blue_dark">#ff0099cc</color>

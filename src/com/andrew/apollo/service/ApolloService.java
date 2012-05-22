@@ -69,7 +69,9 @@ import com.andrew.apollo.IApolloService;
 import com.andrew.apollo.R;
 import com.andrew.apollo.app.widgets.AppWidget11;
 import com.andrew.apollo.app.widgets.AppWidget41;
+import com.andrew.apollo.app.widgets.AppWidget41Inverted;
 import com.andrew.apollo.app.widgets.AppWidget42;
+import com.andrew.apollo.app.widgets.AppWidget42Inverted;
 import com.andrew.apollo.utils.ApolloUtils;
 import com.andrew.apollo.utils.MusicUtils;
 import com.andrew.apollo.utils.SharedPreferencesCompat;
@@ -243,6 +245,10 @@ public class ApolloService extends Service implements Constants {
     private final AppWidget42 mAppWidgetProvider4x2 = AppWidget42.getInstance();
 
     private final AppWidget41 mAppWidgetProvider4x1 = AppWidget41.getInstance();
+    
+    private final AppWidget41Inverted mAppWidgetProvider4x1Inverted = AppWidget41Inverted.getInstance();
+    
+    private final AppWidget42Inverted mAppWidgetProvider4x2Inverted = AppWidget42Inverted.getInstance();
 
     // interval after which we stop the service when idle
     private static final int IDLE_DELAY = 60000;
@@ -380,9 +386,15 @@ public class ApolloService extends Service implements Constants {
             } else if (AppWidget42.CMDAPPWIDGETUPDATE.equals(cmd)) {
                 int[] appWidgetIds = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
                 mAppWidgetProvider4x2.performUpdate(ApolloService.this, appWidgetIds);
+            } else if (AppWidget42Inverted.CMDAPPWIDGETUPDATE.equals(cmd)) {
+                int[] appWidgetIds = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
+                mAppWidgetProvider4x2Inverted.performUpdate(ApolloService.this, appWidgetIds);
             } else if (AppWidget41.CMDAPPWIDGETUPDATE.equals(cmd)) {
                 int[] appWidgetIds = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
                 mAppWidgetProvider4x1.performUpdate(ApolloService.this, appWidgetIds);
+            } else if (AppWidget41Inverted.CMDAPPWIDGETUPDATE.equals(cmd)) {
+                int[] appWidgetIds = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
+                mAppWidgetProvider4x1Inverted.performUpdate(ApolloService.this, appWidgetIds);
             } else if (AppWidget11.CMDAPPWIDGETUPDATE.equals(cmd)) {
                 int[] appWidgetIds = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
                 mAppWidgetProvider1x1.performUpdate(ApolloService.this, appWidgetIds);
@@ -929,6 +941,8 @@ public class ApolloService extends Service implements Constants {
         mAppWidgetProvider1x1.notifyChange(this, what);
         mAppWidgetProvider4x1.notifyChange(this, what);
         mAppWidgetProvider4x2.notifyChange(this, what);
+        mAppWidgetProvider4x1Inverted.notifyChange(this, what);
+        mAppWidgetProvider4x2Inverted.notifyChange(this, what);
 
     }
 
