@@ -90,8 +90,8 @@
     <string name="apollo_1x1">Apollo (1x1)</string>
     <string name="apollo_4x1">Apollo (4x1)</string>
     <string name="apollo_4x2">Apollo (4x2)</string>
-    <string name="apollo_4x1_inverted">Inverted Apollo (4x1)</string>
-    <string name="apollo_4x2_inverted">Inverted Apollo (4x2)</string>
+    <string name="apollo_4x1_inverted">Apollo inverted (4x1)</string>
+    <string name="apollo_4x2_inverted">Apollo inverted (4x2)</string>
 
     <!-- Unknown genre name -->
     <string name="unknown">Unknown</string>
